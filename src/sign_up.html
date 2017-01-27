@@ -1,0 +1,140 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Animal Science Exploration Day</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+ 		<!-- resets -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+        <!-- bootstrap -->
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<!-- styles -->
+        <link rel="stylesheet" href="resources/style/main.css"> 
+    </head>
+    <body>
+        <!--[if lt IE 10]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+
+		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#">Animal Science Exploration Day</a>
+				</div>
+				<div id="navbar" class="navbar-collapse collapse">
+
+				</div>
+			</div>
+		</nav>
+
+
+		<div class="container" style="padding-top: 148px">
+
+			<form>	
+				<fieldset>
+					<legend>Personal Info</legend>
+					<div class="row">						
+						<div class="form-group col-sm-6">
+							<label for="first-name">First Name</label>
+							<input type="text" class="form-control" id="first-name" name="First Name" placeholder="Jane">
+						</div>
+						<div class="form-group col-sm-6">
+							<label for="last-name">Last Name</label>
+							<input type="text" class="form-control" id="last-name" name="Last Name" placeholder="Doe">
+						</div>
+					</div>
+				
+					<div class="row">
+						<div class="form-group col-sm-12">
+							<label for="email">Email Address</label>
+							<input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="janedoe@missouri.edu">
+							<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+						</div>
+					</div>
+				</fieldset>
+				<fieldset>
+					<legend>Address</legend>
+					<div class="row">
+						<div class="form-group col-sm-6">
+							<label for="street">Street</label>
+							<input type="text" class="form-control" id="street" placeholder="205 Jesse Hall">
+						</div>
+						<div class="form-group col-sm-6">
+							<label for="city">City</label>
+							<input type="text" class="form-control" id="city" placeholder="Columbia">
+						</div>
+					</div>
+				</fieldset>
+
+				<fieldset>
+					<legend>School</legend>
+					<div class="row">
+						<div class="form-group col-sm-6">
+							<label for="school-name">School Name</label>
+							<input type="text" class="form-control" id="school-name" name="School Name" placeholder="Southern Boone High School">
+						</div>
+						<div class="form-group col-sm-6">
+							<label for="school-district">School District</label>
+							<input type="text" class="form-control" id="school-district" name="School District" placeholder="Southern Boone R-I">
+						</div>
+					</div>
+				</fieldset>
+
+				<fieldset>
+					<legend>Event Questions</legend>					
+					<div class="row">
+						<div class="form-group">
+							<div class="form-group col-sm-6">
+								<label for="school-name">Shirt Size</label>
+								<div>
+									<label class="radio-inline"><input type="radio" name="shirt-size">XS</label>
+									<label class="radio-inline"><input type="radio" name="shirt-size">S</label>
+									<label class="radio-inline"><input type="radio" name="shirt-size" checked>M</label>
+									<label class="radio-inline"><input type="radio" name="shirt-size">L</label>
+									<label class="radio-inline"><input type="radio" name="shirt-size">XL</label>
+									<label class="radio-inline"><input type="radio" name="shirt-size">XXL</label>
+								</div>
+							</div>
+							<div class="form-group col-sm-6">
+								<label for="allergies">Food Allergies:</label>
+								<textarea class="form-control" rows="2" id="allergies"></textarea>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-group col-sm-12">
+						<label for="career-goals">What are your careers goals?</label>
+						<textarea class="form-control" rows="5" id="career-goals"></textarea>
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-group col-sm-12">
+						<label for="modivation">Why do you want to come to this day?</label>
+						<textarea class="form-control" rows="5" id="modivation"></textarea>
+						</div>
+					</div>
+				</fieldset>
+
+			</form>
+			<hr>
+			<footer>
+				<div class="container">
+					<p>&copy; Animal Sciences, University of Missouri 2017</p>
+				</div>
+			</footer>
+		</div> 
+
+
+		<script src="http://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous"></script>
+		<script src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    </body>
+</html>

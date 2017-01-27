@@ -1,0 +1,23 @@
+{
+  "name": "as_exploration_day",
+  "version": "1.0.0",
+  "description": "Site for the Animal Science Exploration Day",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+     "build-css": "./bin/build-css",
+     "watch-css": "./bin/watch-css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theWizardsBaker/AS_Exploration_Day.git"
+  },
+  "author": "Justin Le Tourneau",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/theWizardsBaker/AS_Exploration_Day/issues"
+  },
+  "homepage": "https://github.com/theWizardsBaker/AS_Exploration_Day#readme"
+}
