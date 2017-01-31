@@ -16,20 +16,9 @@
         <!-- bootstrap -->
 		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 		<!-- styles -->
-        <link rel="stylesheet" href="resources/style/main.css"> 
+        <link rel="stylesheet" href="resources/css/main.css"> 
         <style type="text/css">
-        	  #interests { list-style-type: none; margin: 0; padding: 0;}
-			  #interests li { margin: 0 3px 3px 3px;
 
-    padding:10px;
-	cursor:move;}
-			  #interests li span { position: absolute; margin-left: -1.3em; }
-
-
-    		select.interest {
-    			margin-right: 20px;
-    			font-size: 1.4em;
-    		}
         </style>
     </head>
     <body>
@@ -109,13 +98,13 @@
 						<div class="form-group">
 							<div class="form-group col-sm-6">
 								<label for="school-name">Shirt Size</label>
-								<div>
-									<label class="radio-inline"><input type="radio" name="shirt-size">XS</label>
-									<label class="radio-inline"><input type="radio" name="shirt-size">S</label>
-									<label class="radio-inline"><input type="radio" name="shirt-size" checked>M</label>
-									<label class="radio-inline"><input type="radio" name="shirt-size">L</label>
-									<label class="radio-inline"><input type="radio" name="shirt-size">XL</label>
-									<label class="radio-inline"><input type="radio" name="shirt-size">XXL</label>
+								<div class="text-center">
+									<label class="radio-inline input-lg"><input type="radio" name="shirt-size">XS</label>
+									<label class="radio-inline input-lg"><input type="radio" name="shirt-size">S</label>
+									<label class="radio-inline input-lg"><input type="radio" name="shirt-size" checked>M</label>
+									<label class="radio-inline input-lg"><input type="radio" name="shirt-size">L</label>
+									<label class="radio-inline input-lg"><input type="radio" name="shirt-size">XL</label>
+									<label class="radio-inline input-lg"><input type="radio" name="shirt-size">XXL</label>
 								</div>
 							</div>
 							<div class="form-group col-sm-6">
@@ -142,13 +131,13 @@
 					<div class="row">
 						<div class="form-group col-sm-12">
 							<label for="modivation">Background in Animal Science</label>
-							<div class="radio">
+							<div class="radio input-lg">
 								<label><input type="radio" name="experience">Not a lot of farm experience (some companion animal experience (dog/cat))</label>
 							</div>
-							<div class="radio">
+							<div class="radio input-lg">
 								<label><input type="radio" name="experience">A little experience (grew up in rural county)</label>
 							</div>
-							<div class="radio">
+							<div class="radio input-lg">
 								<label><input type="radio" name="experience">A lot of experience (grew up on a farm)</label>
 							</div>
 						</div>
@@ -159,7 +148,7 @@
 							<label for="interests">If chosen to attend what farm would you be more interested in visiting (1= most interested; 5=least interested)
 </label>
 							<ul id="interests">
-								<li class="interest-selection">
+								<li class="interest-selection input-lg">
 									<select class="interest" id="beef-interest" name="Beef Interest">
 										<option value="1" selected>1</option>
 										<option value="2">2</option>
@@ -169,7 +158,7 @@
 									</select>
 									Beef Farm
 								</li>
-								<li class="interest-selection">
+								<li class="interest-selection input-lg">
 									<select class="interest" id="swine-interest" name="Swine Interest">
 										<option value="1">1</option>
 										<option value="2" selected>2</option>
@@ -179,7 +168,7 @@
 									</select>
 									Swine Farm
 								</li>
-								<li class="interest-selection">
+								<li class="interest-selection input-lg">
 									<select class="interest" id="dairy-interest" name="Dairy Interest">
 										<option value="1">1</option>
 										<option value="2">2</option>
@@ -189,7 +178,7 @@
 									</select>
 									Dairy Farm
 								</li>
-								<li class="interest-selection">
+								<li class="interest-selection input-lg">
 									<select class="interest" id="poultry-interest" name="Poultry Interest">
 										<option value="1">1</option>
 										<option value="2">2</option>
@@ -199,7 +188,7 @@
 									</select>
 									Poultry Farm
 								</li>
-								<li class="interest-selection">
+								<li class="interest-selection input-lg">
 									<select class="interest" id="processing-interest" name="Processing Interest">
 										<option value="1">1</option>
 										<option value="2">2</option>

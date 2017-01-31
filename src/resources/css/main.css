@@ -1,0 +1,12 @@
+figure.figure {
+  margin: 30px 0; }
+
+#interests {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+  #interests select.interest {
+    margin-right: 20px; }
+
+form fieldset {
+  margin-top: 35px; }
