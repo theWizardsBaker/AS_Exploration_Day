@@ -1,12 +1,59 @@
-figure.figure {
-  margin: 30px 0; }
+.navbar {
+  border-radius: 0px;
+  margin-bottom: 0px; }
 
-#interests {
-  list-style-type: none;
-  margin: 0;
-  padding: 0; }
-  #interests select.interest {
-    margin-right: 20px; }
+.navbar-nav li a {
+  padding-top: 10px;
+  padding-bottom: 0px; }
+  .navbar-nav li a .contact-text {
+    padding-left: 24px; }
+
+.navbar-nav li .fa {
+  font-size: 2em; }
+
+.navbar-nav li .color-facebook {
+  color: #3b5998; }
+  .navbar-nav li .color-facebook:hover {
+    color: #8b9dc3; }
+
+.jumbotron {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: #f1b82d; }
+
+#interests li.list-group-item {
+  margin: 10px; }
+
+#interests span.interest-pos {
+  margin-right: 20px;
+  border-right: 1px solid #dddddd;
+  display: inline-block;
+  height: 25px;
+  padding-right: 20px; }
 
 form fieldset {
   margin-top: 35px; }
+
+.container .block {
+  height: 100%;
+  min-height: 300px; }
+  .container .block h2 {
+    padding: 20px;
+    color: white;
+    text-align: center;
+    text-shadow: 3px 3px 5px #313131;
+    border-radius: 20px;
+    border: 1px solid black; }
+
+.container .what-block h2 {
+  background-color: #B661D1; }
+
+.container .who-block h2 {
+  background-color: #92D050; }
+
+.container .how-block h2 {
+  background-color: #EAA316; }
+
+.small, small {
+  color: #a0a0a0;
+  margin-left: 10px; }
