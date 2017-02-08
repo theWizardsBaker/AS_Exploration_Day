@@ -67,13 +67,19 @@
 
 		<div class="container">
 
-			<form>	
+			<div id="form-errors" class="alert alert-danger" role="alert">
+					<!-- Errors in the form can go here -->
+			</div>
+
+			<form id="registration">	
 				<fieldset>
 					<legend>Personal Info</legend>
-					<div class="row">						
+					<div class="row">					
+							<!-- has-error has-feedback -->
 						<div class="form-group col-sm-6">
 							<label for="first-name">First Name</label>
 							<input type="text" class="form-control" id="first-name" name="First Name" placeholder="Jane">
+							<!-- <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span> -->
 						</div>
 						<div class="form-group col-sm-6">
 							<label for="last-name">Last Name</label>
@@ -84,7 +90,7 @@
 					<div class="row">
 						<div class="form-group col-sm-12">
 							<label for="email">Email Address</label>
-							<input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="janedoe@missouri.edu">
+							<input type="email" class="form-control" id="email" name="Email" aria-describedby="emailHelp" placeholder="janedoe@missouri.edu">
 							<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
 						</div>
 					</div>
@@ -94,11 +100,11 @@
 					<div class="row">
 						<div class="form-group col-sm-6">
 							<label for="street">Street</label>
-							<input type="text" class="form-control" id="street" placeholder="205 Jesse Hall">
+							<input type="text" class="form-control" id="street" name="Street" placeholder="205 Jesse Hall">
 						</div>
 						<div class="form-group col-sm-6">
 							<label for="city">City</label>
-							<input type="text" class="form-control" id="city" placeholder="Columbia">
+							<input type="text" class="form-control" id="city" name="City" placeholder="Columbia">
 						</div>
 					</div>
 				</fieldset>
@@ -125,17 +131,17 @@
 							<div class="form-group col-sm-6">
 								<label for="school-name">Shirt Size</label>
 								<div class="text-center">
-									<label class="radio-inline input-lg"><input type="radio" name="shirt-size">XS</label>
-									<label class="radio-inline input-lg"><input type="radio" name="shirt-size">S</label>
-									<label class="radio-inline input-lg"><input type="radio" name="shirt-size" checked>M</label>
-									<label class="radio-inline input-lg"><input type="radio" name="shirt-size">L</label>
-									<label class="radio-inline input-lg"><input type="radio" name="shirt-size">XL</label>
-									<label class="radio-inline input-lg"><input type="radio" name="shirt-size">XXL</label>
+									<label class="radio-inline input-lg"><input type="radio" name="Shirt Size">XS</label>
+									<label class="radio-inline input-lg"><input type="radio" name="Shirt Size">S</label>
+									<label class="radio-inline input-lg"><input type="radio" name="Shirt Size" checked>M</label>
+									<label class="radio-inline input-lg"><input type="radio" name="Shirt Size">L</label>
+									<label class="radio-inline input-lg"><input type="radio" name="Shirt Size">XL</label>
+									<label class="radio-inline input-lg"><input type="radio" name="Shirt Size">XXL</label>
 								</div>
 							</div>
 							<div class="form-group col-sm-6">
 								<label for="allergies">Food Allergies:</label>
-								<textarea class="form-control" rows="2" id="allergies"></textarea>
+								<textarea class="form-control" rows="2" id="allergies" name="Allergies"></textarea>
 							</div>
 						</div>
 					</div>
@@ -143,14 +149,14 @@
 					<div class="row">
 						<div class="form-group col-sm-12">
 						<label for="career-goals">What are your post-high school plans?</label>
-						<textarea class="form-control" rows="5" id="career-goals" placeholder="200 word max"></textarea>
+						<textarea class="form-control" rows="5" id="career-goals" placeholder="" name="Career Plan"></textarea>
 						</div>
 					</div>
 
 					<div class="row">
 						<div class="form-group col-sm-12">
 						<label for="modivation">Why are you interested in this event and what would you like to get from it?</label>
-						<textarea class="form-control" rows="5" id="modivation" placeholder="300 word max"></textarea>
+						<textarea class="form-control" rows="5" id="modivation" placeholder="" name="AS Day Interest"></textarea>
 						</div>
 					</div>
 
@@ -158,20 +164,20 @@
 						<div class="form-group col-sm-12">
 							<label for="modivation">Background in Animal Science</label>
 							<div class="radio input-lg">
-								<label><input type="radio" name="experience" value="little" checked="checked">Little to None ( no pets or livestock )</label>
+								<label><input type="radio" name="Experience" value="little" checked="checked">Little to None ( no pets or livestock )</label>
 							</div>
 							<div class="radio input-lg">
-								<label><input type="radio" name="experience" value="moderate">Moderate ( pets or small-scale livestock )</label>
+								<label><input type="radio" name="Experience" value="moderate">Moderate ( pets or small-scale livestock )</label>
 							</div>
 							<div class="radio input-lg">
-								<label><input type="radio" name="experience" value="extensive">Extensive ( exhibition or breeding )</label>
+								<label><input type="radio" name="Experience" value="extensive">Extensive ( exhibition or breeding )</label>
 							</div>
 						</div>
 					</div>
 
 					<div class="row">
 						<div class="form-group col-sm-12">
-							<label for="interests">Rank the following facility tour and demos according to your interests ( 1 = most, 5 = least interested )</label>
+							<label for="interests">Drag the following facility tour and demos in order according to your interests ( 1 (top) = most, 5 (bottom) = least interested )</label>
 							<ul id="interests" class="sortable list-group">
 								<li class="interest-selection input-lg list-group-item">
 									<span class="interest-pos">1</span> Beef Farm <small>Beef Research and Training Farm</small>
@@ -208,17 +214,58 @@
 		<script src="http://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous"></script>
 		<script src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
 		<script src="resources/script/touch_punch.js"></script>
+		<script src="resources/script/jquery.word-and-character-counter.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 		<script type="text/javascript">
-			$(document).ready(function(){
-				$('#interests').sortable({
-				  cursor: "move",
-				  update: function(event, ui){
-				  		$('#interests li').each(function(ind, itm) {
-				  			$(itm).find('span.interest-pos').text(ind + 1);
-				  		});
-				  }
+
+			var email_validation = new RegExp(/[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+(?:[A-Z]{2}|com|org|net|edu|gov|mil|biz|info|mobi|name|aero|asia|jobs|museum)/);
+
+			function toggle_error(error, element) {
+				
+			}
+
+			function validate_form(registration_form) {
+				var email = $(registration_form).find('input[type=email]')[0];
+				if(!email_validation.test($(email).val())){
+					//add class
+					console.log("booo");
+				}
+
+				var text_fields = $(registration_form).find('input[type=text]');
+				$(text_fields).each(function (ind, elm) {
+					if(!$(elm).val() && $(elm).id != 'email'){
+						console.log($(elm).id, "aint right");
+					}
 				});
+			}
+
+			$(document).ready(function(){
+
+				// make the list of interestes sortable
+				$('#interests').sortable({
+					cursor: "move",
+					update: function(event, ui){
+						$('#interests li').each(function(ind, itm) {
+							$(itm).find('span.interest-pos').text(ind + 1);
+						});
+					}
+				});
+
+				$("#career-goals").counter({
+				    type: 'word',
+				    goal: 200
+				});
+
+				$("#modivation").counter({
+				    type: 'word',
+				    goal: 300
+				});
+
+				$('form#registration').on('submit', function() {
+					validate_form($('form#registration'));
+					return false;
+				});
+
 			});
 		</script>
     </body>

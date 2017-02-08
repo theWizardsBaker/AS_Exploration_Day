@@ -91,7 +91,28 @@ form {
 		background-color: #EAA316;
 	}
 
+	ul.event-list {
+		margin: 0px;
+		padding: 0px 10px;
 
+		& > li.event-list-item {
+			list-style-type: none;
+			padding: 10px;
+			font-size: 1.1em;
+		}
+	}
+
+}
+
+#form-errors {
+	display: none;
+	// border: 1px solid red;
+	// border-radius: 10px;
+	// padding: 30px;
+}
+
+li.ui-sortable-handle {
+	cursor: move;
 }
 
 .small, small {

@@ -54,6 +54,20 @@ form fieldset {
 .container .how-block h2 {
   background-color: #EAA316; }
 
+.container ul.event-list {
+  margin: 0px;
+  padding: 0px 10px; }
+  .container ul.event-list > li.event-list-item {
+    list-style-type: none;
+    padding: 10px;
+    font-size: 1.1em; }
+
+#form-errors {
+  display: none; }
+
+li.ui-sortable-handle {
+  cursor: move; }
+
 .small, small {
   color: #a0a0a0;
   margin-left: 10px; }
