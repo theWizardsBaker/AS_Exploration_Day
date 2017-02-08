@@ -69,6 +69,7 @@
 
 			<div id="form-errors" class="alert alert-danger" role="alert">
 					<!-- Errors in the form can go here -->
+					Please correct the errors highlited below
 			</div>
 
 			<form id="registration">	
@@ -220,23 +221,42 @@
 
 			var email_validation = new RegExp(/[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+(?:[A-Z]{2}|com|org|net|edu|gov|mil|biz|info|mobi|name|aero|asia|jobs|museum)/);
 
-			function toggle_error(error, element) {
-				
+			function toggle_error(element) {
+					var parent = $(element).parent();
+					$(parent).addClass('has-error has-feedback');
+					$(parent).append('<span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>');
 			}
 
 			function validate_form(registration_form) {
+
+				// reset our errors
+				$('div.form-group').removeClass('has-error has-feedback');
+				$('span.form-control-feedback').remove();
+				$('#form-errors').hide();
+				var errors = false; 
+
 				var email = $(registration_form).find('input[type=email]')[0];
 				if(!email_validation.test($(email).val())){
 					//add class
-					console.log("booo");
+					toggle_error($(email));
+					errors = true;
 				}
 
-				var text_fields = $(registration_form).find('input[type=text]');
+				var text_fields = $(registration_form).find('input[type=text], textarea:not(#allergies)');
 				$(text_fields).each(function (ind, elm) {
-					if(!$(elm).val() && $(elm).id != 'email'){
-						console.log($(elm).id, "aint right");
+					if(!$(elm).val()){
+						toggle_error($(elm));
+						errors = true;
 					}
 				});
+
+				if(errors){
+
+					$('#form-errors').show();
+
+					$("html, body").animate({ scrollTop: 0 }, "fast");
+
+				}
 			}
 
 			$(document).ready(function(){

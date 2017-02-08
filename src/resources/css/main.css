@@ -62,6 +62,9 @@ form fieldset {
     padding: 10px;
     font-size: 1.1em; }
 
+.form-control-feedback {
+  right: 10px; }
+
 #form-errors {
   display: none; }
 
