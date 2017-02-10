@@ -77,3 +77,6 @@ li.input-lg {
 .small, small {
   color: #a0a0a0;
   margin-left: 10px; }
+
+.slick-prev:before, .slick-next:before {
+  color: #929292; }

@@ -20,7 +20,7 @@
 		<!-- slick -->
 		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
 		<!-- Add the slick-theme.css if you want default styling -->
-		<!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css"/> -->
+		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css"/>
 		<!-- styles -->
         <link rel="stylesheet" href="resources/css/main.css"> 
     </head>
@@ -67,12 +67,22 @@
 		<section class="container">
 			<div class="row">
 
-				<figure class="figure col-md-12">
-					<img src="http://placehold.it/1000x300?text=Image+Carousel" alt='pretty image' class="center-block figure-img img-fluid">
-				</figure>
+				<div class="col-md-12">
+					<div class="carousel">
+						<figure class="figure">
+							<img src="http://placehold.it/1000x300?text=Image+Carousel+1" alt='pretty image' class="center-block figure-img img-fluid">
+						</figure>
+						<figure class="figure">
+							<img src="http://placehold.it/1000x300?text=Image+Carousel+2" alt='pretty image' class="center-block figure-img img-fluid">
+						</figure>
+						<figure class="figure">
+							<img src="http://placehold.it/1000x300?text=Image+Carousel+3" alt='pretty image' class="center-block figure-img img-fluid">
+						</figure>
+					</div>
+				</div>
 
 				<div class="row event-info">
-					<div class="col-md-4 block what-block">
+					<div class="col-sm-4 block what-block">
 						<h2>What is it?</h2>
 <!-- 						<p> 
 							Animal Science Exploration Day is a one day event put on by the Division of Animal Sciences at the University of Missouri. This event includes hands-on activites, tours of the University Farms and Vet School, and a chance to meet both current and alumni students.
@@ -87,7 +97,7 @@
 						</ul>
 
 					</div>
-					<div class="col-md-4 block who-block">
+					<div class="col-sm-4 block who-block">
 						<h2>Who is it for?</h2>
 						<!-- <p>Sophomores and Juniors in High School who are intereted in learning about Animal Sciences.</p> -->
 
@@ -97,7 +107,7 @@
 						</ul>
 						
 					</div>
-					<div class="col-md-4 block how-block">
+					<div class="col-sm-4 block how-block">
 						<h2>How to Apply?</h2>
 						<!-- <p>Complete the registration form below by April 3rd, 2017. Only 30 spots are available!</p> -->
 
@@ -132,6 +142,14 @@
 		<script src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 		<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('.carousel').slick({
+					dots: true,
+					infinite: true
+				});
+			});
+		</script>
 
     </body>
 </html>
