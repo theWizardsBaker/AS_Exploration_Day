@@ -31,6 +31,8 @@
   padding-top: 0px;
   padding-bottom: 0px;
   background-color: #92D050; }
+  .jumbotron span.byline {
+    font-size: 1.3em; }
   .jumbotron .logo {
     max-height: 250px; }
 
