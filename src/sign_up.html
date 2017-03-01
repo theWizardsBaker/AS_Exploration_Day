@@ -38,7 +38,7 @@
 
 				<ul class="nav navbar-nav navbar-right">
 					<li>
-						<a href="https://www.facebook.com/"><i class="fa fa-facebook-square color-facebook"></i> <span class="contact-text fa-text">Animal Science Exploration Day 2017</span> </a>
+						<a href="https://www.facebook.com/events/1708983609393804/"><i class="fa fa-facebook-square color-facebook"></i> <span class="contact-text fa-text">Animal Science Exploration Day 2017</span> </a>
 					</li>
 					<li>
 						<a href="mailto:animalscienced@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i> <span class="contact-text">animalscienced@gmail.com</span></a>
@@ -253,7 +253,10 @@
 				if(errors){
 					$('#form-errors').show();
 					$("html, body").animate({ scrollTop: $("#form-errors").offset().top }, "fast");
+					return false;
 				}
+
+				return true;
 			}
 
 			$(document).ready(function(){
@@ -279,7 +282,9 @@
 				});
 
 				$('form#registration').on('submit', function() {
-					validate_form($('form#registration'));
+					if(validate_form($('form#registration'))){
+
+					}
 					return false;
 				});
 

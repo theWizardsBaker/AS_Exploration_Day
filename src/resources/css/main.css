@@ -1,3 +1,10 @@
+/* pull-right on all except xs devices */
+@media (min-width: 992px) {
+  .pull-right-md {
+    float: right; }
+  .pull-left-md {
+    float: left; } }
+
 .navbar {
   border-radius: 0px;
   margin-bottom: 0px; }
@@ -21,9 +28,11 @@
     color: #8b9dc3; }
 
 .jumbotron {
-  padding-top: 30px;
-  padding-bottom: 30px;
-  background-color: #f1b82d; }
+  padding-top: 0px;
+  padding-bottom: 0px;
+  background-color: #92D050; }
+  .jumbotron .logo {
+    max-height: 250px; }
 
 #interests li.list-group-item {
   margin: 10px; }
@@ -48,15 +57,17 @@ form fieldset {
     text-shadow: 3px 3px 5px #313131;
     border-radius: 20px;
     border: 1px solid black; }
+  .container .block p {
+    padding: 15px; }
 
 .container .what-block h2 {
-  background-color: #B661D1; }
+  background-color: #3090C7; }
 
 .container .who-block h2 {
   background-color: #92D050; }
 
 .container .how-block h2 {
-  background-color: #EAA316; }
+  background-color: #3090C7; }
 
 .container ul.event-list {
   margin: 0px;
@@ -84,3 +95,10 @@ li.input-lg {
 
 .slick-prev:before, .slick-next:before {
   color: #929292; }
+
+.sponsors {
+  text-align: center;
+  padding: 20px 0px; }
+  .sponsors img {
+    height: 75px;
+    margin: 0px 20px; }
