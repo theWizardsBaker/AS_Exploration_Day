@@ -7,6 +7,10 @@
   padding-bottom: 0px; }
   .navbar-nav li a .contact-text {
     padding-left: 24px; }
+  .navbar-nav li a .fa-text {
+    color: #3b5998; }
+    .navbar-nav li a .fa-text:hover {
+      color: #8b9dc3; }
 
 .navbar-nav li .fa {
   font-size: 2em; }
