@@ -206,7 +206,7 @@
 				</fieldset>
 				<div class="g-recaptcha" data-sitekey="6Le5chcUAAAAAD5MsOffUeX1-h50eAZGzFpgTbyw"></div>
 				<div class="text-center">
-					 <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+					 <button id="submit" type="submit" class="btn btn-primary btn-lg">Submit</button>
  				</div>
 			</form>
 			<hr>
@@ -219,6 +219,7 @@
 						<img src="resources/images/sponsor/cafnr.PNG">
 						<img src="resources/images/sponsor/cocacola.JPG">
 						<img src="resources/images/sponsor/sinclair_research.JPG">
+						<img src="resources/images/sponsor/farmhouse.PNG">
 					</div>
 					<p>&copy; Animal Sciences, University of Missouri 2017</p>
 				</div>
@@ -302,10 +303,11 @@
 					$('div.form-group').removeClass('has-error has-feedback');
 					$('span.form-control-feedback').remove();
 					$('#form-errors').hide();
+					$('#submit').attr('disabled', 'disabled');
 
 					if(validate_form($('form#registration'))){
 						var data = $('form#registration').serializeArray();
-						// data.push({name: "capcha", value: captchgrecaptcha.getResponse()});
+						data.push({name: "capcha", value: grecaptcha.getResponse()});
 						var interests = $.map($('#interests').find("li"), function(elm){ return $(elm).data('value'); });
 						data.push({name: "tour_interest", value: interests.join(';')});
 						$.ajax({
@@ -313,7 +315,11 @@
 						    url: this.action,
 						    data: $.param(data),
 						}).done(function(data, textStatus, jqXHR) {
-							$('form').slideUp().replaceWith($('<p>').text("Application Submitted Successfully")).slideDown();
+							if(data.success == true){
+								$('form').slideUp().replaceWith($('<h3>').text(data.message)).slideDown();
+							} else {
+								alert(data.message);
+							}
 						})
 						.fail(function(jqXHR, textStatus, errorThrown) {
 							alert( "An Error Occured:\n\nApplication could not be submitted." );
@@ -321,6 +327,7 @@
 					} else {
 						$('#form-errors').show();
 						$("html, body").animate({ scrollTop: $("#form-errors").offset().top }, "fast");
+						$('#submit').removeAttr('disabled');
 					}
 					return false;
 				});
