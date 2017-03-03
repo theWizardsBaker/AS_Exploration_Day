@@ -1,10 +1,4 @@
-/* pull-right on all except xs devices */
-@media (min-width: 992px) {
-  .pull-right-md {
-    float: right; }
-  .pull-left-md {
-    float: left; } }
-
+@import url("https://fonts.googleapis.com/css?family=Boogaloo");
 .navbar {
   border-radius: 0px;
   margin-bottom: 0px; }
@@ -31,6 +25,10 @@
   padding-top: 0px;
   padding-bottom: 0px;
   background-color: #92D050; }
+  .jumbotron h1 {
+    font-family: 'Boogaloo', cursive;
+    font-size: 4em;
+    text-shadow: 3px 2px 0px white; }
   .jumbotron span.byline {
     font-size: 1.3em; }
   .jumbotron .logo {
@@ -60,7 +58,8 @@ form fieldset {
     border-radius: 20px;
     border: 1px solid black; }
   .container .block p {
-    padding: 15px; }
+    padding: 15px;
+    font-size: 1.1em; }
 
 .container .what-block h2 {
   background-color: #3090C7; }
@@ -104,3 +103,8 @@ li.input-lg {
   .sponsors img {
     height: 75px;
     margin: 0px 20px; }
+
+.vcenter {
+  display: inline-block;
+  vertical-align: middle;
+  float: none; }

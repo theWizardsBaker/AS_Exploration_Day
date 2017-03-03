@@ -50,10 +50,10 @@
 
 		<section class="jumbotron">
 			<div class="container center-block text-center row">
-				<div class="col-sm-5">
+				<div class="col-sm-5 vcenter">
 					<img class="logo center-block figure-img img-fluid img-responsive" src="resources/images/logos/logo.PNG">
-				</div>
-				<div class="col-sm-7">
+				</div><!--
+				--><div class="col-sm-7 vcenter">
 					<h1>Animal Science Exploration Day</h1>
 					<p>
 						<span class="byline">Discover the World of Animal Science</span>
@@ -77,26 +77,26 @@
 					Please correct the errors highlited below
 			</div>
 
-			<form id="registration">	
+			<form id="registration" action="submit_application.php">	
 				<fieldset>
 					<legend>Personal Info</legend>
 					<div class="row">					
 							<!-- has-error has-feedback -->
 						<div class="form-group col-sm-6">
 							<label for="first-name">First Name</label>
-							<input type="text" class="form-control" id="first-name" name="First Name" placeholder="Jane">
+							<input type="text" class="form-control" id="first-name" name="first_name" placeholder="Jane">
 							<!-- <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span> -->
 						</div>
 						<div class="form-group col-sm-6">
 							<label for="last-name">Last Name</label>
-							<input type="text" class="form-control" id="last-name" name="Last Name" placeholder="Doe">
+							<input type="text" class="form-control" id="last-name" name="last_name" placeholder="Doe">
 						</div>
 					</div>
 				
 					<div class="row">
 						<div class="form-group col-sm-12">
 							<label for="email">Email Address</label>
-							<input type="email" class="form-control" id="email" name="Email" aria-describedby="emailHelp" placeholder="janedoe@missouri.edu">
+							<input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="janedoe@missouri.edu">
 							<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
 						</div>
 					</div>
@@ -106,11 +106,11 @@
 					<div class="row">
 						<div class="form-group col-sm-6">
 							<label for="street">Street</label>
-							<input type="text" class="form-control" id="street" name="Street" placeholder="205 Jesse Hall">
+							<input type="text" class="form-control" id="street" name="street" placeholder="205 Jesse Hall">
 						</div>
 						<div class="form-group col-sm-6">
 							<label for="city">City</label>
-							<input type="text" class="form-control" id="city" name="City" placeholder="Columbia">
+							<input type="text" class="form-control" id="city" name="city" placeholder="Columbia">
 						</div>
 					</div>
 				</fieldset>
@@ -120,11 +120,11 @@
 					<div class="row">
 						<div class="form-group col-sm-6">
 							<label for="school-name">School Name</label>
-							<input type="text" class="form-control" id="school-name" name="School Name" placeholder="Southern Boone High School">
+							<input type="text" class="form-control" id="school-name" name="school_name" placeholder="Southern Boone High School">
 						</div>
 						<div class="form-group col-sm-6">
 							<label for="school-district">School District</label>
-							<input type="text" class="form-control" id="school-district" name="School District" placeholder="Southern Boone R-I">
+							<input type="text" class="form-control" id="school-district" name="school_district" placeholder="Southern Boone R-I">
 						</div>
 					</div>
 				</fieldset>
@@ -137,17 +137,17 @@
 							<div class="form-group col-sm-6">
 								<label for="school-name">Shirt Size</label>
 								<div class="text-center">
-									<label class="radio-inline input-lg"><input type="radio" name="Shirt Size">XS</label>
-									<label class="radio-inline input-lg"><input type="radio" name="Shirt Size">S</label>
-									<label class="radio-inline input-lg"><input type="radio" name="Shirt Size" checked>M</label>
-									<label class="radio-inline input-lg"><input type="radio" name="Shirt Size">L</label>
-									<label class="radio-inline input-lg"><input type="radio" name="Shirt Size">XL</label>
-									<label class="radio-inline input-lg"><input type="radio" name="Shirt Size">XXL</label>
+									<label class="radio-inline input-lg"><input type="radio" name="shirt_size" value="XS">XS</label>
+									<label class="radio-inline input-lg"><input type="radio" name="shirt_size" value="S">S</label>
+									<label class="radio-inline input-lg"><input type="radio" name="shirt_size" value="M" checked>M</label>
+									<label class="radio-inline input-lg"><input type="radio" name="shirt_size" value="L">L</label>
+									<label class="radio-inline input-lg"><input type="radio" name="shirt_size" value="XL">XL</label>
+									<label class="radio-inline input-lg"><input type="radio" name="shirt_size" value="XXL">XXL</label>
 								</div>
 							</div>
 							<div class="form-group col-sm-6">
 								<label for="allergies">Food Allergies:</label>
-								<textarea class="form-control" rows="2" id="allergies" name="Allergies"></textarea>
+								<textarea class="form-control" rows="2" id="allergies" name="allergies"></textarea>
 							</div>
 						</div>
 					</div>
@@ -155,14 +155,14 @@
 					<div class="row">
 						<div class="form-group col-sm-12">
 						<label for="career-goals">What are your post-high school plans?</label>
-						<textarea class="form-control" rows="5" id="career-goals" placeholder="" name="Career Plan"></textarea>
+						<textarea class="form-control" rows="5" id="career-goals" placeholder="" name="career_goals" data-maxwords="200"></textarea>
 						</div>
 					</div>
 
 					<div class="row">
 						<div class="form-group col-sm-12">
 						<label for="modivation">Why are you interested in this event and what would you like to get from it?</label>
-						<textarea class="form-control" rows="5" id="modivation" placeholder="" name="AS Day Interest"></textarea>
+						<textarea class="form-control" rows="5" id="modivation" placeholder="" name="modivation" data-maxwords="300"></textarea>
 						</div>
 					</div>
 
@@ -170,13 +170,13 @@
 						<div class="form-group col-sm-12">
 							<label for="modivation">Background in Animal Science</label>
 							<div class="radio input-lg">
-								<label><input type="radio" name="Experience" value="little" checked="checked">Little to None ( no pets or livestock )</label>
+								<label><input type="radio" name="as_background" value="little" checked="checked">Little to None ( no pets or livestock )</label>
 							</div>
 							<div class="radio input-lg">
-								<label><input type="radio" name="Experience" value="moderate">Moderate ( pets or small-scale livestock )</label>
+								<label><input type="radio" name="as_background" value="moderate">Moderate ( pets or small-scale livestock )</label>
 							</div>
 							<div class="radio input-lg">
-								<label><input type="radio" name="Experience" value="extensive">Extensive ( exhibition or breeding )</label>
+								<label><input type="radio" name="as_background" value="extensive">Extensive ( exhibition or breeding )</label>
 							</div>
 						</div>
 					</div>
@@ -185,25 +185,26 @@
 						<div class="form-group col-sm-12">
 							<label for="interests">Drag the following facility tour and demos in order according to your interests ( 1 (top) = most, 5 (bottom) = least interested )</label>
 							<ul id="interests" class="sortable list-group">
-								<li class="interest-selection input-lg list-group-item">
+								<li class="interest-selection input-lg list-group-item" data-value="Beef Farm">
 									<span class="interest-pos">1</span> Beef Farm <small>Beef Research and Training Farm</small>
 								</li>
-								<li class="interest-selection input-lg list-group-item">
+								<li class="interest-selection input-lg list-group-item" data-value="Swine Farm">
 									<span class="interest-pos">2</span> Swine Farm <small>Swine Pasture and Teaching Farm</small>
 								</li>
-								<li class="interest-selection input-lg list-group-item">
+								<li class="interest-selection input-lg list-group-item" data-value="Dairy Farm">
 									<span class="interest-pos">3</span> Dairy Farm <small>Foremost Dairy Center</small>
 								</li>
-								<li class="interest-selection input-lg list-group-item">
+								<li class="interest-selection input-lg list-group-item" data-value="Poultry Farm">
 									<span class="interest-pos">4</span> Poultry Farm <small>Rocheford Farm</small>
 								</li>
-								<li class="interest-selection input-lg list-group-item">
+								<li class="interest-selection input-lg list-group-item" data-value="Meat Processing Demonstration">
 									<span class="interest-pos">5</span> Meat Processing Demonstration at Mizzou Abattoir <small>MU Equine Teaching Facliity</small>
 								</li>
 							</ul>
 						</div>
 					</div>
 				</fieldset>
+				<div class="g-recaptcha" data-sitekey="6Le5chcUAAAAAD5MsOffUeX1-h50eAZGzFpgTbyw"></div>
 				<div class="text-center">
 					 <button type="submit" class="btn btn-primary btn-lg">Submit</button>
  				</div>
@@ -211,6 +212,14 @@
 			<hr>
 			<footer>
 				<div class="container">
+					<p class="text-center">Thank you to all our Sponsors!</p>
+					<div class="sponsors">			
+						<img src="resources/images/sponsor/alpha_gamma_rho.JPG">
+						<img src="resources/images/sponsor/mo_pork.JPG">
+						<img src="resources/images/sponsor/cafnr.PNG">
+						<img src="resources/images/sponsor/cocacola.JPG">
+						<img src="resources/images/sponsor/sinclair_research.JPG">
+					</div>
 					<p>&copy; Animal Sciences, University of Missouri 2017</p>
 				</div>
 			</footer>
@@ -222,6 +231,8 @@
 		<script src="resources/script/touch_punch.js"></script>
 		<script src="resources/script/jquery.word-and-character-counter.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<script src='https://www.google.com/recaptcha/api.js'></script>
+
 		<script type="text/javascript">
 
 			var email_validation = new RegExp(/[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+(?:[A-Z]{2}|com|org|net|edu|gov|mil|biz|info|mobi|name|aero|asia|jobs|museum)/);
@@ -233,11 +244,6 @@
 			}
 
 			function validate_form(registration_form) {
-
-				// reset our errors
-				$('div.form-group').removeClass('has-error has-feedback');
-				$('span.form-control-feedback').remove();
-				$('#form-errors').hide();
 				var errors = false; 
 
 				var email = $(registration_form).find('input[type=email]')[0];
@@ -247,21 +253,16 @@
 					errors = true;
 				}
 
-				var text_fields = $(registration_form).find('input[type=text], textarea:not(#allergies)');
+				var text_fields = $(registration_form).find('input[type=text], textarea:not(#allergies, #g-recaptcha-response)');
+
 				$(text_fields).each(function (ind, elm) {
-					if(!$(elm).val()){
+					if($(elm).val() == ''){
 						toggle_error($(elm));
 						errors = true;
 					}
 				});
 
-				if(errors){
-					$('#form-errors').show();
-					$("html, body").animate({ scrollTop: $("#form-errors").offset().top }, "fast");
-					return false;
-				}
-
-				return true;
+				return !errors;
 			}
 
 			$(document).ready(function(){
@@ -285,10 +286,41 @@
 				    type: 'word',
 				    goal: 300
 				});
+				// account for some copy-pasting
+				$('#career-goals, #modivation').on('paste', function() {
+				    var words = $(this).val().split(/\b[\s,\.-:;]*/);
+				    var max_words = $(this).data('maxwords');
+				    if (words.length > max_words) {
+				        words.splice(max_words);
+				        $(this).val(words.join(""));
+				    }
+				});
 
 				$('form#registration').on('submit', function() {
-					if(validate_form($('form#registration'))){
 
+					// reset our errors
+					$('div.form-group').removeClass('has-error has-feedback');
+					$('span.form-control-feedback').remove();
+					$('#form-errors').hide();
+
+					if(validate_form($('form#registration'))){
+						var data = $('form#registration').serializeArray();
+						// data.push({name: "capcha", value: captchgrecaptcha.getResponse()});
+						var interests = $.map($('#interests').find("li"), function(elm){ return $(elm).data('value'); });
+						data.push({name: "tour_interest", value: interests.join(';')});
+						$.ajax({
+						    type: 'POST',
+						    url: this.action,
+						    data: $.param(data),
+						}).done(function(data, textStatus, jqXHR) {
+							$('form').slideUp().replaceWith($('<p>').text("Application Submitted Successfully")).slideDown();
+						})
+						.fail(function(jqXHR, textStatus, errorThrown) {
+							alert( "An Error Occured:\n\nApplication could not be submitted." );
+						});
+					} else {
+						$('#form-errors').show();
+						$("html, body").animate({ scrollTop: $("#form-errors").offset().top }, "fast");
 					}
 					return false;
 				});
