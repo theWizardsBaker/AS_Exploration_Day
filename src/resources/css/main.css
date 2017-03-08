@@ -110,3 +110,9 @@ li.input-lg {
   display: inline-block;
   vertical-align: middle;
   float: none; }
+
+.faq div + div {
+  border-top: 1px dashed #ddd; }
+
+.faq li.list-group-item {
+  border: none; }

@@ -182,3 +182,14 @@ li.input-lg {
     vertical-align: middle;
     float: none;
 }
+
+.faq {
+
+	div + div {
+		border-top: 1px dashed #ddd;
+	}
+
+	li.list-group-item{
+		border: none;
+	}
+}
