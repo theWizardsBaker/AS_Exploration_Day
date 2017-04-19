@@ -72,6 +72,12 @@
 
 		<div class="container">
 
+			<div id="application-status" class="text-center">
+				<h3>Application submission for Animal Science Day 2017 is now closed.</h3>
+				<br/>
+				<h3>Thank you to all who applied!</h3>
+			</div>
+
 			<div id="form-errors" class="alert alert-danger" role="alert">
 					<!-- Errors in the form can go here -->
 					Please correct the errors highlited below
@@ -198,7 +204,10 @@
 									<span class="interest-pos">4</span> Poultry Farm <small>Rocheford Farm</small>
 								</li>
 								<li class="interest-selection input-lg list-group-item" data-value="Meat Processing Demonstration">
-									<span class="interest-pos">5</span> Meat Processing Demonstration at Mizzou Abattoir <small>MU Equine Teaching Facliity</small>
+									<span class="interest-pos">5</span> Meat Processing Demonstration <small>Mizzou Abattoir</small>
+								</li>
+								<li class="interest-selection input-lg list-group-item" data-value="Horse Farm">
+									<span class="interest-pos">6</span> Horse Farm <small>MU Equine Teaching Facliity</small>
 								</li>
 							</ul>
 						</div>
@@ -220,6 +229,9 @@
 						<img src="resources/images/sponsor/cocacola.JPG">
 						<img src="resources/images/sponsor/sinclair_research.JPG">
 						<img src="resources/images/sponsor/farmhouse.PNG">
+						<img src="resources/images/sponsor/sigma_alpha.JPG" style="height: 50px">
+						<img src="resources/images/sponsor/mr_delivery.JPG" style="height: 100px">
+						<img src="resources/images/sponsor/novus.JPG">
 					</div>
 					<p>&copy; Animal Sciences, University of Missouri 2017</p>
 				</div>
@@ -266,7 +278,17 @@
 				return !errors;
 			}
 
+			function disable_form(disabled) {
+				if(disabled){
+					$('#registration').remove();
+					$('#application-status').show();
+				}
+			}
+
 			$(document).ready(function(){
+
+				// disable the form
+				disable_form(true);
 
 				// make the list of interestes sortable
 				$('#interests').sortable({
