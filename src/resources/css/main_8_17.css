@@ -36,6 +36,9 @@
   .jumbotron p {
     font-style: italic; }
 
+#application-status {
+  display: none; }
+
 #interests li.list-group-item {
   margin: 10px; }
 

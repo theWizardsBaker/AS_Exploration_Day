@@ -1,23 +1,29 @@
 <?php
 
     function verifyCapcha($capcha, $secret_key){
+        
         $url = 'https://www.google.com/recaptcha/api/siteverify';
+        
         $data = array(
             'secret' => $secret_key,
             'response' => $capcha
         );
+
         $options = array(
             'http' => array (
                 'method' => 'POST',
                 'content' => http_build_query($data)
             )
         );
+
         $context  = stream_context_create($options);
         $verify = file_get_contents($url, false, $context);
         $captcha_success = json_decode($verify);
 
         return $captcha_success->success;
     }
+
+    ob_start();
 
     $google_capcha = '6Le5chcUAAAAAMymO7ubZVMb8CLNp9ePCI6n55OA';
 
@@ -35,9 +41,9 @@
         exit();
     }
     // create our sql statement
-    $stmt = $mysqli->prepare("INSERT INTO student_applications (first_name, last_name, email, street, city, school_name, school_district, shirt_size, allergies, post_highschool_plans, modivation, as_background, tour_interest) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)");
+    $stmt = $mysqli->prepare("INSERT INTO student_applications (first_name, last_name, email, street, city, school_name, school_district, shirt_size, allergies, post_highschool_plans, modivation, as_background, tour_interest, current_school_year, phone_number, secondary_contact, as_experience) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
     // bind params, and i guess pretend to be a sssssssnake
-    $stmt->bind_param('sssssssssssss', $first_name,
+    $stmt->bind_param('sssssssssssssssss', $first_name,
                                        $last_name,
                                        $email,
                                        $street,
@@ -49,7 +55,11 @@
                                        $post_highschool_plans,
                                        $modivation,
                                        $as_background,
-                                       $tour_interest);
+                                       $tour_interest,
+                                       $current_school_year,
+                                       $phone_number,
+                                       $secondary_contact,
+                                       $as_experience);
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_POST)) {
 
@@ -72,6 +82,11 @@
             $as_background = isset($_POST['as_background']) ? $_POST['as_background'] : null;
             $tour_interest = isset($_POST['tour_interest']) ? $_POST['tour_interest'] : null;
             $allergies = isset($_POST['allergies']) ? $_POST['allergies'] : null;
+            // new params
+            $current_school_year = isset($_POST['current_school_year']) ? $_POST['current_school_year'] : null;
+            $phone_number = isset($_POST['phone_number']) ? $_POST['phone_number'] : null;
+            $secondary_contact = isset($_POST['secondary_contact']) ? $_POST['secondary_contact'] : null;
+            $as_experience = isset($_POST['as_experience']) ? $_POST['as_experience'] : null;
 
             /* execute prepared statement */
             $statement_success = $stmt->execute();
@@ -79,6 +94,9 @@
             if($statement_success){
                 $result->success = true;
                 $result->message = "Application submitted successfully!";
+            } else {
+                $result->success = false;
+                $result->message = $statement_success;
             }
         } else {
             $result->message = "Google says you're a robot";
@@ -93,7 +111,8 @@
     /* close connection */
     $mysqli->close();
 
-    ob_clean();
+    // ob_clean();
+    if (ob_get_length()) ob_end_clean();
     
     header('Content-Type: application/json');
     echo json_encode($result);

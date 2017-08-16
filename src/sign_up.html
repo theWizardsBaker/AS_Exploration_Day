@@ -18,7 +18,7 @@
 		<!-- font awesome -->
 		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 		<!-- styles -->
-        <link rel="stylesheet" href="resources/css/main.css"> 
+        <link rel="stylesheet" href="resources/css/main_8_17.css"> 
         <style type="text/css">
 
         </style>
@@ -58,7 +58,7 @@
 					<p>
 						<span class="byline">Discover the World of Animal Science</span>
 						<br/>
-						May 3, 2017
+						October 13, 2017
 					</p>
 				</div>
 				<!-- 				
@@ -86,8 +86,8 @@
 			<form id="registration" action="submit_application.php">	
 				<fieldset>
 					<legend>Personal Info</legend>
-					<div class="row">					
-							<!-- has-error has-feedback -->
+					<div class="row">
+						<!-- has-error has-feedback -->
 						<div class="form-group col-sm-6">
 							<label for="first-name">First Name</label>
 							<input type="text" class="form-control" id="first-name" name="first_name" placeholder="Jane">
@@ -98,7 +98,6 @@
 							<input type="text" class="form-control" id="last-name" name="last_name" placeholder="Doe">
 						</div>
 					</div>
-				
 					<div class="row">
 						<div class="form-group col-sm-12">
 							<label for="email">Email Address</label>
@@ -106,7 +105,50 @@
 							<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
 						</div>
 					</div>
+					<div class="row">
+						<!-- has-error has-feedback -->
+						<div class="form-group col-sm-6">
+							<label for="phone-number">Phone Number</label>
+							<input type="text" class="form-control" id="phone-number" name="phone_number" placeholder="888-888-8888">
+						</div>
+						<div class="form-group col-sm-6">
+							<label for="second-contact">Secondary Contact (email or phone)</label>
+							<input type="text" class="form-control" id="second-contact" name="secondary_contact" placeholder="888-888-8888 / janedoe@missouri.edu">
+						</div>
+					</div>
 				</fieldset>
+
+				<fieldset>
+					<legend>Experience and Background</legend>
+
+					<div class="row">
+						<div class="form-group col-sm-6">
+							<label for="modivation">Experience in Animal Science</label>
+							<div class="radio input-lg">
+								<label><input type="radio" name="as_experience" value="little" checked="checked">Little to None ( no pets or livestock )</label>
+							</div>
+							<div class="radio input-lg">
+								<label><input type="radio" name="as_experience" value="moderate">Moderate ( pets or small-scale livestock )</label>
+							</div>
+							<div class="radio input-lg">
+								<label><input type="radio" name="as_experience" value="extensive">Extensive ( exhibition or breeding )</label>
+							</div>
+						</div>
+						<div class="form-group col-sm-6">
+							<label for="modivation">Background in Animal Science</label>
+							<div class="radio input-lg">
+								<label><input type="radio" name="as_background" value="urban" checked="checked">Urban</label>
+							</div>
+							<div class="radio input-lg">
+								<label><input type="radio" name="as_background" value="rural">Rural non-farm/ranch</label>
+							</div>
+							<div class="radio input-lg">
+								<label><input type="radio" name="as_background" value="farm">Farm or Ranch</label>
+							</div>
+						</div>
+					</div>
+				</fieldset>
+
 				<fieldset>
 					<legend>Address</legend>
 					<div class="row">
@@ -117,6 +159,14 @@
 						<div class="form-group col-sm-6">
 							<label for="city">City</label>
 							<input type="text" class="form-control" id="city" name="city" placeholder="Columbia">
+						</div>
+						<div class="form-group col-sm-6">
+							<label for="county">County</label>
+							<input type="text" class="form-control" id="county" name="county" placeholder="Boone">
+						</div>
+						<div class="form-group col-sm-6">
+							<label for="state">State</label>
+							<input type="text" class="form-control" id="state" name="state" placeholder="Missouri">
 						</div>
 					</div>
 				</fieldset>
@@ -131,6 +181,17 @@
 						<div class="form-group col-sm-6">
 							<label for="school-district">School District</label>
 							<input type="text" class="form-control" id="school-district" name="school_district" placeholder="Southern Boone R-I">
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-group col-sm-6">
+							<label for="current-year">Current Year</label>
+							<div class="text-center">
+								<label class="radio-inline input-lg"><input type="radio" name="current_school_year" value="freshman" checked="checked">Freshman</label>
+								<label class="radio-inline input-lg"><input type="radio" name="current_school_year" value="sophomore">Sophomore</label>
+								<label class="radio-inline input-lg"><input type="radio" name="current_school_year" value="junior">Junior</label>
+								<label class="radio-inline input-lg"><input type="radio" name="current_school_year" value="senior">Senior</label>
+							</div>
 						</div>
 					</div>
 				</fieldset>
@@ -174,21 +235,6 @@
 
 					<div class="row">
 						<div class="form-group col-sm-12">
-							<label for="modivation">Background in Animal Science</label>
-							<div class="radio input-lg">
-								<label><input type="radio" name="as_background" value="little" checked="checked">Little to None ( no pets or livestock )</label>
-							</div>
-							<div class="radio input-lg">
-								<label><input type="radio" name="as_background" value="moderate">Moderate ( pets or small-scale livestock )</label>
-							</div>
-							<div class="radio input-lg">
-								<label><input type="radio" name="as_background" value="extensive">Extensive ( exhibition or breeding )</label>
-							</div>
-						</div>
-					</div>
-
-					<div class="row">
-						<div class="form-group col-sm-12">
 							<label for="interests">Drag the following facility tour and demos in order according to your interests ( 1 (top) = most, 5 (bottom) = least interested )</label>
 							<ul id="interests" class="sortable list-group">
 								<li class="interest-selection input-lg list-group-item" data-value="Beef Farm">
@@ -222,16 +268,20 @@
 			<footer>
 				<div class="container">
 					<p class="text-center">Thank you to all our Sponsors!</p>
-					<div class="sponsors">			
+					<div class="sponsors">
+						<img src="resources/images/sponsor/stadium.PNG">
+						<img src="resources/images/sponsor/sinclair_research.JPG">
 						<img src="resources/images/sponsor/alpha_gamma_rho.JPG">
 						<img src="resources/images/sponsor/mo_pork.JPG">
+						<img src="resources/images/sponsor/jackson.JPG">
+						<img src="resources/images/sponsor/block_bridle.PNG">
+						
+<!-- 						<img src="resources/images/sponsor/sigma_alpha.JPG" style="height: 50px">
 						<img src="resources/images/sponsor/cafnr.PNG">
 						<img src="resources/images/sponsor/cocacola.JPG">
-						<img src="resources/images/sponsor/sinclair_research.JPG">
 						<img src="resources/images/sponsor/farmhouse.PNG">
-						<img src="resources/images/sponsor/sigma_alpha.JPG" style="height: 50px">
 						<img src="resources/images/sponsor/mr_delivery.JPG" style="height: 100px">
-						<img src="resources/images/sponsor/novus.JPG">
+						<img src="resources/images/sponsor/novus.JPG"> -->
 					</div>
 					<p>&copy; Animal Sciences, University of Missouri 2017</p>
 				</div>
@@ -251,9 +301,9 @@
 			var email_validation = new RegExp(/[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+(?:[A-Z]{2}|com|org|net|edu|gov|mil|biz|info|mobi|name|aero|asia|jobs|museum)/);
 
 			function toggle_error(element) {
-					var parent = $(element).parent();
-					$(parent).addClass('has-error has-feedback');
-					$(parent).append('<span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>');
+				var parent = $(element).parent();
+				$(parent).addClass('has-error has-feedback');
+				$(parent).append('<span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>');
 			}
 
 			function validate_form(registration_form) {
@@ -288,7 +338,7 @@
 			$(document).ready(function(){
 
 				// disable the form
-				disable_form(true);
+				// disable_form(true);
 
 				// make the list of interestes sortable
 				$('#interests').sortable({
